@@ -142,7 +142,8 @@ def buildw(ccdir, conf, confdir, btype, out_csv):
 
 def main():
 
-    l = ["cryptom-01", "fsm-01", "netm-01", "randm-01", "randm-02"]
+    l = ["cryptom-01", "fsm-01", "netm-01", "randm-01", "randm-02",
+         "soundm-01", "driversm-01"]
     linux = "linux-5.13"
     debug(f"* Moving to {linux}")
     os.chdir(linux)
