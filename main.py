@@ -116,7 +116,7 @@ def debug(msg, end="\n"):
 
 # --------------------------------------------------------------------------
 
-def buildw(ccdir, conf, confdir, btype, out_csv):
+def buildw(ccdir, conf, confdir, btype):
     confpath = f"{ccdir}/{conf}"
     branch_curr = f"{confdir}-{conf}-{btype}"
     debug(f"  - {conf}[{branch_curr}],", end="")
@@ -129,8 +129,6 @@ def buildw(ccdir, conf, confdir, btype, out_csv):
     status = build(jobs=None, config=confpath,  with_time=True)
     time = get_build_time()
     debug(f"{time}s, ok={status==0}")
-    out_csv.write(f"{branch_curr} {time} {status==0}\n")
-    out_csv.flush()
     git_add_all()
 
     if btype == "cb":
@@ -162,9 +160,6 @@ def main():
         debug("  - Committing source")
         git_commit("source")
 
-    out_csv = open(RESULTS, 'w')
-    out_csv.write("configuration time(s) ok\n")
-    out_csv.flush()
     debug("* Builds")
 
     for confdir in l:
@@ -177,14 +172,12 @@ def main():
         tobuild.sort()
         # Clean
         for conf in tobuild:
-            buildw(ccdir, conf, confdir, "cb", out_csv)
+            buildw(ccdir, conf, confdir, "cb")
 
         tobuild.remove("base")
         # Incremental
         for conf in tobuild:
-            buildw(ccdir, conf, confdir, "ib", out_csv)
-
-    out_csv.close()
+            buildw(ccdir, conf, confdir, "ib")
 
 
 if __name__ == "__main__":
