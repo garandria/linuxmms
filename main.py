@@ -74,7 +74,7 @@ def git_init(directory="."):
     return call_cmd(cmd)
 
 def git_add_all():
-    cmd = "git add -f *"
+    cmd = "git add -f ."
     return call_cmd(cmd)
 
 def git_commit(msg):
@@ -113,39 +113,6 @@ def debug(msg, end="\n"):
 
 # --------------------------------------------------------------------------
 
-def buildw(ccdir, conf, confdir, btype):
-    confpath = f"{ccdir}/{conf}"
-    branch_curr = f"{confdir}-{conf}-{btype}"
-    debug(f"  - {conf}[{branch_curr}],", end="")
-
-    if btype == "ib":
-        ret = git_checkout(f"{confdir}-base-cb")
-        if ret.returncode != 0:
-            print(f"ERROR: checkout to {confdir}-base-cb")
-            print(ret.stderr)
-
-    if git_create_branch(branch_curr).returncode != 0:
-        print(f"ERROR: create {branch_curr}")
-    status = build(jobs=None, config=confpath,  with_time=True)
-    time = get_build_time()
-    debug(f"{time}s, ok={status==0}")
-    if git_add_all().returncode != 0:
-        print(f"ERROR: git all")
-
-    if btype == "cb":
-        if git_commit("Clean build").returncode != 0:
-            print("ERROR: commit clean build")
-    else:
-        ret = git_commit("Incremental build")
-        if ret.returncode != 0:
-            print("ERROR: commit inc build")
-            print(ret.stderr.decode())
-
-    if git_checkout("master").returncode != 0:
-        print("ERROR: checkout to master")
-
-# --------------------------------------------------------------------------
-
 def main():
 
     l = ["cryptom-01", "fsm-01", "netm-01", "randm-01", "randm-02",
@@ -173,20 +140,41 @@ def main():
     for confdir in l:
         ccdir = "../{}".format(confdir)
         debug(f"* {confdir}")
-        base_config = "{}/base".format(ccdir)
-        base_branch = confdir + "-base"
         tobuild = list(
             filter(lambda x: not x.endswith("-trace"), os.listdir(ccdir)))
         tobuild.sort()
         # Clean
         for conf in tobuild:
-            buildw(ccdir, conf, confdir, "cb")
-
+            # git checkout master
+            # git checkout -b new-branch
+            # build
+            # add and commit
+            # git checkout master
+            confpath = f"{ccdir}/{conf}"
+            branch_curr = f"{confdir}-{conf}-cb"
+            debug(f"  - {conf}[{branch_curr}],", end="")
+            git_checkout("master")
+            git_create_branch(branch_curr)
+            status = build(jobs=None, config=confpath,  with_time=True)
+            time = get_build_time()
+            debug(f"{time}s, ok={status==0}")
+            git_add_all()
+            git_commit("Clean build")
+        git_checkout("master")
         tobuild.remove("base")
         # Incremental
         for conf in tobuild:
-            buildw(ccdir, conf, confdir, "ib")
-
+            confpath = f"{ccdir}/{conf}"
+            branch_curr = f"{confdir}-{conf}-ib"
+            debug(f"  - {conf}[{branch_curr}],", end="")
+            git_checkout(f"{confdir}-{base}-cb")
+            git_create_branch(branch_curr)
+            status = build(jobs=None, config=confpath,  with_time=True)
+            time = get_build_time()
+            debug(f"{time}s, ok={status==0}")
+            git_add_all()
+            git_commit("Incremental build")
+        git_checkout("master")
 
 if __name__ == "__main__":
     main()
