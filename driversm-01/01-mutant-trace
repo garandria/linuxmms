@@ -1,0 +1,4 @@
+Change: USB_NET_CDC_EEM (tristate) n -> m *Diagnoses OK*
+#
+# configuration written to .config
+#

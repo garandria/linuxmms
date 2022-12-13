@@ -1,0 +1,4 @@
+Change: SND_MESON_CODEC_GLUE (tristate) n -> y *Diagnoses OK*
+#
+# configuration written to .config
+#

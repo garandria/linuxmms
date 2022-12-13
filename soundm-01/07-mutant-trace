@@ -1,0 +1,4 @@
+Change: SND_SB16 (tristate) y -> n *Ready*
+#
+# configuration written to .config
+#

@@ -1,0 +1,4 @@
+Change: SERIAL_LANTIQ_CONSOLE (bool) y -> n *Ready*
+#
+# configuration written to .config
+#

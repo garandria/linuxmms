@@ -1,0 +1,4 @@
+Change: SND_HDA_CODEC_HDMI (tristate) n -> y *Diagnoses OK*
+#
+# configuration written to .config
+#

@@ -1,0 +1,4 @@
+Change: SND_XEN_FRONTEND (tristate) n -> y *Diagnoses OK*
+#
+# configuration written to .config
+#

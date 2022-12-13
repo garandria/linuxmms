@@ -1,0 +1,4 @@
+Change: SENSORS_BH1770 (tristate) n -> y *Ready*
+#
+# configuration written to .config
+#

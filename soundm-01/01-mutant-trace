@@ -1,0 +1,4 @@
+Change: SND_SOC_TEGRA210_AHUB (tristate) n -> y *Diagnoses OK*
+#
+# configuration written to .config
+#
