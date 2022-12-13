@@ -167,7 +167,7 @@ def main():
             confpath = f"{ccdir}/{conf}"
             branch_curr = f"{confdir}-{conf}-ib"
             debug(f"  - {conf}[{branch_curr}],", end="")
-            git_checkout(f"{confdir}-{base}-cb")
+            git_checkout(f"{confdir}-base-cb")
             git_create_branch(branch_curr)
             status = build(jobs=None, config=confpath,  with_time=True)
             time = get_build_time()
