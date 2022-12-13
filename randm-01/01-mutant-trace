@@ -1,0 +1,4 @@
+Change: SND_ALS4000 (tristate) n -> y *Diagnoses OK*
+#
+# configuration written to .config
+#

@@ -1,0 +1,5 @@
+Change: CRYPTO_POLY1305_MIPS (tristate) n -> y *No diagnoses FOUND*
+Change: COMMON_CLK_MT6779 (bool) n -> y *Diagnoses OK*
+#
+# configuration written to .config
+#

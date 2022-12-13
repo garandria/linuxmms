@@ -1,0 +1,4 @@
+Change: CRYPTO_SKCIPHER (tristate) y -> n *Diagnoses OK*
+#
+# configuration written to .config
+#

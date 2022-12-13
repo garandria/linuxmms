@@ -1,0 +1,5 @@
+Change: SERIAL_ZS_CONSOLE (bool) n -> y *No diagnoses FOUND*
+Change: AD5272 (tristate) m -> n *Ready*
+#
+# configuration written to .config
+#

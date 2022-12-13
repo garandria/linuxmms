@@ -1,0 +1,4 @@
+Change: BRIDGE_EBT_T_NAT (tristate) n -> m *Diagnoses OK*
+#
+# configuration written to .config
+#

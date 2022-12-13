@@ -1,0 +1,4 @@
+Change: CRAMFS_MTD (bool) n -> y *Diagnoses OK*
+#
+# configuration written to .config
+#

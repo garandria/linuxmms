@@ -1,0 +1,4 @@
+Change: BRIDGE_EBT_PKTTYPE (tristate) n -> y *Diagnoses OK*
+#
+# configuration written to .config
+#

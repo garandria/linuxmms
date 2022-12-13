@@ -1,0 +1,4 @@
+Change: ASYNC_MEMCPY (tristate) n -> y *Diagnoses OK*
+#
+# configuration written to .config
+#

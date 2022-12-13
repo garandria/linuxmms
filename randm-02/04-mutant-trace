@@ -1,0 +1,5 @@
+Change: MXC_CLK_SCU (tristate) n -> y *No diagnoses FOUND*
+Change: UNIPHIER_EFUSE (tristate) n -> y *Diagnoses OK*
+#
+# configuration written to .config
+#

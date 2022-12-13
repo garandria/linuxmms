@@ -1,0 +1,4 @@
+Change: CRYPTO_TWOFISH_X86_64_3WAY (tristate) y -> n *Ready*
+#
+# configuration written to .config
+#

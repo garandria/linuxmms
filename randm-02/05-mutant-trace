@@ -1,0 +1,4 @@
+Change: CRYPTO_CAST6 (tristate) y -> n *Diagnoses OK*
+#
+# configuration written to .config
+#

@@ -1,0 +1,5 @@
+Change: CRYPTO_FIPS (bool) n -> y *Not applied*
+Change: DEBUG_TIMEKEEPING (bool) y -> n *Ready*
+#
+# configuration written to .config
+#

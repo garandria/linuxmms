@@ -1,0 +1,4 @@
+Change: NETFILTER_XT_NAT (tristate) n -> y *Diagnoses OK*
+#
+# configuration written to .config
+#

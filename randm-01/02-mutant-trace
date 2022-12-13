@@ -1,0 +1,4 @@
+Change: DEBUG_KOBJECT_RELEASE (bool) n -> y *Diagnoses OK*
+#
+# configuration written to .config
+#

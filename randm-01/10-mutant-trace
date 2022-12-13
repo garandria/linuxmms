@@ -1,0 +1,5 @@
+Change: QCOM_GPI_DMA (tristate) n -> y *No diagnoses FOUND*
+Change: VDPA_SIM_NET (tristate) n -> y *Diagnoses OK*
+#
+# configuration written to .config
+#

@@ -1,0 +1,4 @@
+Change: RTC_DRV_AT91RM9200 (tristate) n -> y *Diagnoses OK*
+#
+# configuration written to .config
+#

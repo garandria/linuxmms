@@ -1,0 +1,4 @@
+Change: CRYPTO_ANSI_CPRNG (tristate) y -> n *Ready*
+#
+# configuration written to .config
+#

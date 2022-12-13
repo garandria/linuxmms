@@ -1,0 +1,4 @@
+Change: NET_MPLS_GSO (tristate) y -> m *Ready*
+#
+# configuration written to .config
+#

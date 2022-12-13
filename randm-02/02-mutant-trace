@@ -1,0 +1,4 @@
+Change: USB_SERIAL_EDGEPORT (tristate) n -> y *Diagnoses OK*
+#
+# configuration written to .config
+#

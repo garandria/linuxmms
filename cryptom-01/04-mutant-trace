@@ -1,0 +1,4 @@
+Change: CRYPTO_ECB (tristate) y -> n *Ready*
+#
+# configuration written to .config
+#

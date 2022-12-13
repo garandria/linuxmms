@@ -1,0 +1,4 @@
+Change: CRYPTO_CTR (tristate) y -> n *Diagnoses OK*
+#
+# configuration written to .config
+#

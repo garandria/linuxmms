@@ -1,0 +1,4 @@
+Change: CHROMEOS_LAPTOP (tristate) y -> n *Ready*
+#
+# configuration written to .config
+#

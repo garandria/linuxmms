@@ -1,0 +1,4 @@
+Change: IP_SET_BITMAP_IPMAC (tristate) n -> y *Diagnoses OK*
+#
+# configuration written to .config
+#

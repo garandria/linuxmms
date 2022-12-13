@@ -1,0 +1,6 @@
+Change: GENERIC_LIB_DEVMEM_IS_ALLOWED (bool) n -> y *No diagnoses FOUND*
+Change: AHCI_ST (tristate) n -> y *No diagnoses FOUND*
+Change: BACKLIGHT_AAT2870 (tristate) n -> y *Diagnoses OK*
+#
+# configuration written to .config
+#

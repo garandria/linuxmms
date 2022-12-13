@@ -1,0 +1,4 @@
+Change: CRYPTO_ALGAPI2 (tristate) y -> n *Diagnoses OK*
+#
+# configuration written to .config
+#

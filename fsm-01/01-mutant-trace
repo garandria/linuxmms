@@ -1,0 +1,4 @@
+Change: F2FS_FS_LZ4 (bool) n -> y *Diagnoses OK*
+#
+# configuration written to .config
+#
