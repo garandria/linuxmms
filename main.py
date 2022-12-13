@@ -122,8 +122,10 @@ def buildw(ccdir, conf, confdir, btype):
     debug(f"  - {conf}[{branch_curr}],", end="")
 
     if btype == "ib":
-        if git_checkout(f"{confdir}-base-cb").returncode != 0:
+        ret = git_checkout(f"{confdir}-base-cb")
+        if ret.returncode != 0:
             print(f"ERROR: checkout to {confdir}-base-cb")
+            print(ret.stderr)
 
     if git_create_branch(branch_curr).returncode != 0:
         print(f"ERROR: create {branch_curr}")
