@@ -121,9 +121,8 @@ def buildw(ccdir, conf, confdir, btype, out_csv):
     branch_curr = f"{confdir}-{conf}-{btype}"
     debug(f"  - {conf}[{branch_curr}],", end="")
 
-    if btype == "cb":
-        git_checkout("master")
-    else:
+    git_checkout("master")
+    if btype == "ib":
         git_checkout(f"{confdir}-base-cb")
 
     git_create_branch(branch_curr)
