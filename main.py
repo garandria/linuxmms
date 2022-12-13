@@ -121,8 +121,6 @@ def buildw(ccdir, conf, confdir, btype):
     branch_curr = f"{confdir}-{conf}-{btype}"
     debug(f"  - {conf}[{branch_curr}],", end="")
 
-    if git_checkout("master").returncode != 0:
-        print("ERROR: checkout to master")
     if btype == "ib":
         if git_checkout(f"{confdir}-base-cb").returncode != 0:
             print(f"ERROR: checkout to {confdir}-base-cb")
@@ -141,6 +139,9 @@ def buildw(ccdir, conf, confdir, btype):
     else:
         if git_commit("Incremental build").returncode != 0:
             print("ERROR: commit inc build")
+
+    if git_checkout("master").returncode != 0:
+        print("ERROR: checkout to master")
 
 # --------------------------------------------------------------------------
 
