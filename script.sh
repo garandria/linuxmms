@@ -22,4 +22,4 @@ fi
 
 singularity build -F build-env.sif docker://garandria/build-env
 
-time singularity run --bind /srv/local/grandria/linuxmms:/srv/local/grandria/linuxmms build-env.sif python3 main.py >> stdout.log
+singularity run --bind /srv/local/grandria/linuxmms:/srv/local/grandria/linuxmms build-env.sif python3 main.py >> stdout.log
