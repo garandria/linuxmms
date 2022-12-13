@@ -121,20 +121,26 @@ def buildw(ccdir, conf, confdir, btype):
     branch_curr = f"{confdir}-{conf}-{btype}"
     debug(f"  - {conf}[{branch_curr}],", end="")
 
-    git_checkout("master")
+    if git_checkout("master").returncode != 0:
+        print("ERROR: checkout to master")
     if btype == "ib":
-        git_checkout(f"{confdir}-base-cb")
+        if git_checkout(f"{confdir}-base-cb").returncode != 0:
+            print(f"ERROR: checkout to {confdir}-base-cb")
 
-    git_create_branch(branch_curr)
+    if git_create_branch(branch_curr).returncode != 0:
+        print(f"ERROR: create {branch_curr}")
     status = build(jobs=None, config=confpath,  with_time=True)
     time = get_build_time()
     debug(f"{time}s, ok={status==0}")
-    git_add_all()
+    if git_add_all().returncode != 0:
+        print(f"ERROR: git all")
 
     if btype == "cb":
-        git_commit("Clean build")
+        if git_commit("Clean build").returncode != 0:
+            print("ERROR: commit clean build")
     else:
-        git_commit("Incremental build")
+        if git_commit("Incremental build").returncode != 0:
+            print("ERROR: commit inc build")
 
 # --------------------------------------------------------------------------
 
