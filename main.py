@@ -109,9 +109,6 @@ def git_config(prefix, field, val):
 # --------------------------------------------------------------------------
 
 def debug(msg, end="\n"):
-    with open("build.log", 'w') as log:
-        log.write(msg + end)
-        log.flush()
     print(msg, end=end, flush=True)
 
 # --------------------------------------------------------------------------
