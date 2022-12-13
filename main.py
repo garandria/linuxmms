@@ -136,8 +136,10 @@ def buildw(ccdir, conf, confdir, btype):
         if git_commit("Clean build").returncode != 0:
             print("ERROR: commit clean build")
     else:
-        if git_commit("Incremental build").returncode != 0:
+        ret = git_commit("Incremental build")
+        if ret.returncode != 0:
             print("ERROR: commit inc build")
+            print(ret.stderr.decode())
 
     if git_checkout("master").returncode != 0:
         print("ERROR: checkout to master")
