@@ -1,0 +1,11 @@
+branch,diff,option,type,change
+soundm-01-01-mutant,8,SND_SOC_TEGRA210_AHUB,tristate,n -> y
+soundm-01-02-mutant,45,SND_XEN_FRONTEND,tristate,n -> y
+soundm-01-03-mutant,16,SND_SOC_SOF_IMX8,tristate,n -> y
+soundm-01-04-mutant,22,SND_SOC_INTEL_HASWELL_MACH,tristate,n -> y
+soundm-01-05-mutant,7,SND_MESON_CODEC_GLUE,tristate,n -> y
+soundm-01-06-mutant,36,SND_HDA_CODEC_HDMI,tristate,n -> y
+soundm-01-07-mutant,2,SND_SB16,tristate,y -> n
+soundm-01-08-mutant,100,SND_SOC_INTEL_KBL,tristate,n -> y
+soundm-01-09-mutant,11,SND_SOC_RT5677,tristate,n -> y
+soundm-01-10-mutant,6,SND_SOC_TLV320AIC3X_SPI,tristate,n -> y

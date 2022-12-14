@@ -1,0 +1,11 @@
+branch,diff,option,type,change
+fsm-01-01-mutant,12,F2FS_FS_LZ4,bool,n -> y
+fsm-01-02-mutant,1,TMPFS_POSIX_ACL,bool,y -> n
+fsm-01-03-mutant,2,CUSE,tristate,n -> m
+fsm-01-04-mutant,1,UBIFS_FS_SECURITY,bool,y -> n
+fsm-01-05-mutant,1,NLS_CODEPAGE_855,tristate,m -> y
+fsm-01-06-mutant,12,F2FS_FS_LZORLE,bool,n -> y
+fsm-01-07-mutant,3,CRAMFS_MTD,bool,n -> y
+fsm-01-08-mutant,8,JFFS2_RUBIN,bool,n -> y
+fsm-01-09-mutant,1,COREDUMP,bool,y -> n
+fsm-01-10-mutant,1,NLS_MAC_GREEK,tristate,n -> m

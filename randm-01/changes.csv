@@ -1,0 +1,11 @@
+branch,diff,option,type,change
+randm-01-01-mutant,13,SND_ALS4000,tristate,n -> y
+randm-01-02-mutant,4,DEBUG_KOBJECT_RELEASE,bool,n -> y
+randm-01-03-mutant,1,DEBUG_TIMEKEEPING,bool,y -> n
+randm-01-04-mutant,28,DRM_SCHED,tristate,n -> y
+randm-01-05-mutant,2,SURFACE_PRO3_BUTTON,tristate,n -> y
+randm-01-06-mutant,4,EDAC_I10NM,tristate,n -> m
+randm-01-07-mutant,14,TCG_TIS_ST33ZP24_SPI,tristate,n -> m
+randm-01-08-mutant,1,AD5272,tristate,m -> n
+randm-01-09-mutant,32,DRM_GUD,tristate,n -> y
+randm-01-10-mutant,23,VDPA_SIM_NET,tristate,n -> y

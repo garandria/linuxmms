@@ -1,0 +1,11 @@
+branch,diff,option,type,change
+randm-02-01-mutant,2,BACKLIGHT_AAT2870,tristate,n -> y
+randm-02-02-mutant,52,USB_SERIAL_EDGEPORT,tristate,n -> y
+randm-02-03-mutant,1,CHROMEOS_LAPTOP,tristate,y -> n
+randm-02-04-mutant,57,UNIPHIER_EFUSE,tristate,n -> y
+randm-02-05-mutant,2,CRYPTO_CAST6,tristate,y -> n
+randm-02-06-mutant,1,HDC2010,tristate,y -> n
+randm-02-07-mutant,69,COMMON_CLK_MT8183_IPU_CORE0,bool,n -> y
+randm-02-08-mutant,21,AD5504,tristate,n -> y
+randm-02-09-mutant,58,COMMON_CLK_MT6779,bool,n -> y
+randm-02-10-mutant,57,RTC_DRV_AT91RM9200,tristate,n -> y

@@ -1,0 +1,11 @@
+branch,diff,option,type,change
+cryptom-01-01-mutant,1,CRYPTO_DRBG_CTR,bool,n -> y
+cryptom-01-02-mutant,30,ASYNC_MEMCPY,tristate,n -> y
+cryptom-01-03-mutant,1,CRYPTO_ANSI_CPRNG,tristate,y -> n
+cryptom-01-04-mutant,1,CRYPTO_ECB,tristate,y -> n
+cryptom-01-05-mutant,1,CRYPTO_USER_API_RNG_CAVP,bool,n -> y
+cryptom-01-06-mutant,46,CRYPTO_SKCIPHER,tristate,y -> n
+cryptom-01-07-mutant,1,CRYPTO_TWOFISH_X86_64_3WAY,tristate,y -> n
+cryptom-01-08-mutant,189,CRYPTO_ALGAPI2,tristate,y -> n
+cryptom-01-09-mutant,7,CRYPTO_CTR,tristate,y -> n
+cryptom-01-10-mutant,2,CRYPTO_CAST6,tristate,y -> n

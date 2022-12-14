@@ -1,0 +1,11 @@
+branch,diff,option,type,change
+driversm-01-01-mutant,116,USB_NET_CDC_EEM,tristate,n -> m
+driversm-01-02-mutant,2,COMMON_CLK_MT2701_MMSYS,bool,n -> y
+driversm-01-03-mutant,2,TPS6105X,tristate,m -> y
+driversm-01-04-mutant,3,MSM_MMCC_8960,tristate,n -> m
+driversm-01-05-mutant,43,LEDS_CLASS,tristate,y -> n
+driversm-01-06-mutant,2,TPS6105X,tristate,m -> y
+driversm-01-07-mutant,1,SENSORS_BH1770,tristate,n -> y
+driversm-01-08-mutant,1,SERIAL_LANTIQ_CONSOLE,bool,y -> n
+driversm-01-09-mutant,113,ATH9K_COMMON_SPECTRAL,bool,n -> y
+driversm-01-10-mutant,1,BH1780,tristate,m -> n

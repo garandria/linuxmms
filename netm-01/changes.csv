@@ -1,0 +1,11 @@
+branch,diff,option,type,change
+netm-01-01-mutant,23,BRIDGE_EBT_PKTTYPE,tristate,n -> y
+netm-01-02-mutant,19,OPENVSWITCH,tristate,n -> m
+netm-01-03-mutant,1,NET_MPLS_GSO,tristate,y -> m
+netm-01-04-mutant,23,BRIDGE_EBT_T_NAT,tristate,n -> m
+netm-01-05-mutant,20,NCSI_OEM_CMD_GET_MAC,bool,n -> y
+netm-01-06-mutant,6,NET_REDIRECT,bool,n -> y
+netm-01-07-mutant,22,IP_SET_BITMAP_IPMAC,tristate,n -> y
+netm-01-08-mutant,23,NETFILTER_XT_TARGET_CHECKSUM,tristate,n -> m
+netm-01-09-mutant,28,NF_NAT_FTP,tristate,n -> m
+netm-01-10-mutant,29,NETFILTER_XT_NAT,tristate,n -> y
